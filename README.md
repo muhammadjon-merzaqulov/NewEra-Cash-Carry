@@ -1,49 +1,56 @@
 # NewEra-Cash-Carry
-<p>Bu loyiha do'konni boshqarish tizimi uchun Python dasturi. Tizimda foydalanuvchi login va parol yordamida tizimga kiradi. Tizimda uchta turdagi foydalanuvchi mavjud: mijoz, admin va superadmin.</p>
+Mana, yuqoridagi README.md faylini to'liq Markdown formatida quyidagicha yozib berdim:
 
-<h2>Tizimning asosiy imkoniyatlari</h2>
-<ul>
-    <li><strong>Mijozlar:</strong> Tizimga kirib, o'z profilingizni ko'rish va yangilash imkoniyatiga ega.</li>
-    <li><strong>Admin:</strong> Foydalanuvchilarga boshqaruv ruxsatlarini beradi va do'konni boshqaradi.</li>
-    <li><strong>Superadmin:</strong> Yuqori darajadagi boshqaruv ruxsatlariga ega va tizimning asosiy boshqaruvchisidir.</li>
-</ul>
+markdown
+Copy
+Edit
+# Store Management System
 
-<h2>O‘rnatish</h2>
-<p>Dasturga kerakli kutubxonalarni o'rnatish:</p>
-<pre><code>pip install -r requirements.txt</code></pre>
+Bu loyiha do'konni boshqarish tizimi uchun yaratilgan Python dasturidir. Ushbu tizimda foydalanuvchilar turli rollarga ega: mijoz, admin va superadmin. Har bir rol o'ziga xos funktsiyalar va imkoniyatlarga ega bo'lib, tizim orqali foydalanuvchilar ma'lumotlarini boshqarish mumkin.
 
-<p>SQLite ma'lumotlar bazasini yaratish (agar hali mavjud bo'lmasa):</p>
-<p>store.db faylini yaratish va unga foydalanuvchi ma'lumotlarini saqlash uchun kerakli jadval va ma'lumotlarni joylashtirish.</p>
+## Asosiy imkoniyatlar
+- **Mijozlar** tizimga kirib, o'z profilingizni ko'rish va yangilash imkoniyatiga ega bo'lishadi.
+- **Admin** foydalanuvchilarga boshqaruv ruxsatlarini beradi, mahsulotlarni va buyurtmalarni boshqaradi.
+- **Superadmin** yuqori darajadagi boshqaruv ruxsatlariga ega bo'lib, tizimning barcha funksiyalarini boshqaradi.
 
-<h2>Foydalanish</h2>
-<ol>
-    <li>Dastur ishga tushganda foydalanuvchi loginini kiritadi.</li>
-    <li>Agar foydalanuvchi tizimda mavjud bo'lsa, parolni kiritish talab qilinadi.</li>
-    <li>Agar foydalanuvchi yangi bo'lsa, tizim yangi foydalanuvchi yaratish uchun imkoniyat beradi.</li>
-    <li>Tizim foydalanuvchining rolini tekshiradi (mijoz, admin yoki superadmin) va mos ravishda tegishli menyu ko'rsatiladi.</li>
-</ol>
+2. Ma'lumotlar bazasini tayyorlash:
+Dasturda ma'lumotlarni saqlash uchun SQLite ma'lumotlar bazasidan foydalaniladi. Dastur ishga tushirilganda, store.db nomli ma'lumotlar bazasi yaratiladi va foydalanuvchi ma'lumotlari saqlanadi.
 
-<h2>Tizimda ishlash</h2>
-<p>Tizimda ro'yxatdan o'tgan foydalanuvchilarning ma'lumotlari <code>store.db</code> SQLite ma'lumotlar bazasida saqlanadi.</p>
+3. Virtual Muhit:
+Agar siz virtual muhitdan foydalanishni xohlasangiz, quyidagicha virtual muhit yaratib, faollashtiring:
 
-<h3>menu.py fayl</h3>
-<ul>
-    <li><strong>admin_menu:</strong> Admin foydalanuvchi uchun menyu.</li>
-    <li><strong>customer_menu:</strong> Mijoz foydalanuvchi uchun menyu.</li>
-    <li><strong>superadmin_menu:</strong> Superadmin foydalanuvchi uchun menyu.</li>
-</ul>
+Virtual muhit yaratish:
 
-<h3>query.py fayl</h3>
-<ul>
-    <li><strong>have_user(username):</strong> Foydalanuvchi tizimda mavjudligini tekshiradi.</li>
-    <li><strong>get_role(username, password):</strong> Foydalanuvchining rolini aniqlaydi.</li>
-    <li><strong>add_user(username, password):</strong> Yangi foydalanuvchi qo'shadi.</li>
-</ul>
+bash
+python -m venv venv
+Virtual muhitni faollashtirish:
 
-<h2>Mualliflar</h2>
-    <ul>
-        <li><a href="https://github.com/muhammadjon-merzaqulov">Muhammadjon Merzaqulov</a></li>
-    </ul>
+Mac/Linux:
+bash
+source venv/bin/activate
+Windows:
+bash
+.\venv\Scripts\activate
+Foydalanish
+Dasturga kirish:
 
-    <h2>Litsenziya</h2>
-    <p>Bu loyiha <strong>MIT Litsenziyasi</strong> asosida litsenziyalangan.</p>
+Dastur ishga tushirilganda foydalanuvchi loginini kiritadi.
+Agar foydalanuvchi tizimda mavjud bo'lsa, parolni kiritish talab qilinadi.
+Agar foydalanuvchi yangi bo'lsa, tizim yangi foydalanuvchi yaratish uchun imkoniyat beradi.
+Foydalanuvchining roli:
+
+Tizim foydalanuvchining rolini aniqlaydi: mijoz, admin yoki superadmin.
+Tegishli rolga qarab, foydalanuvchiga mos menyu ko'rsatiladi.
+Mijozlar o'z profilingizni ko'rish va yangilash imkoniyatiga ega.
+
+Adminlar foydalanuvchilarni boshqarish va mahsulotlar bilan ishlash imkoniyatiga ega.
+
+Superadminlar tizimning barcha funksiyalarini boshqaradi va yuqori darajadagi ruxsatlarni belgilaydi.
+
+Tizimda ishlash
+Tizimda ro'yxatdan o'tgan foydalanuvchilarning ma'lumotlari store.db SQLite ma'lumotlar bazasida saqlanadi.
+
+Mualliflar
+Muhammadjon Merzaqulov
+Litsenziya
+Bu loyiha MIT Litsenziyasi asosida litsenziyalangan.
