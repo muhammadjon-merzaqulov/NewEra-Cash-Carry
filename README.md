@@ -1,10 +1,4 @@
 # NewEra-Cash-Carry
-Mana, yuqoridagi README.md faylini to'liq Markdown formatida quyidagicha yozib berdim:
-
-markdown
-Copy
-Edit
-# Store Management System
 
 Bu loyiha do'konni boshqarish tizimi uchun yaratilgan Python dasturidir. Ushbu tizimda foydalanuvchilar turli rollarga ega: mijoz, admin va superadmin. Har bir rol o'ziga xos funktsiyalar va imkoniyatlarga ega bo'lib, tizim orqali foydalanuvchilar ma'lumotlarini boshqarish mumkin.
 
